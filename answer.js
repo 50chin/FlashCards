@@ -15,7 +15,7 @@ class Answer {
       .split('/n');
     const arrAnswer = [];
     for (let i = 1; i < line.length; i += 3) {
-      arrAnswer.push(line[i]);
+      arrAnswer.push(line[i + 1]);
     }
     return arrAnswer;
   }
