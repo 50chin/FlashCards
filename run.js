@@ -13,14 +13,14 @@ const themes = ['Cartoon', 'Serials', 'EmojiCinema'];
 const iChoose = readlineSync.keyInSelect(themes, 'Выберите тему');
 
 let score = 0;
-for (let i = 0; i < qu.readLineTheme(themes[iChoose]).length; i += 1) {
-//   const us = readlineSync.keyInSelect(
-   
-//   );
-//   if (i === us) {
-
-    // score += 1;
-//   }
+for (let i = 0; i < 5; i += 1) {
+  const user = readlineSync.keyInSelect(
+    an.readLineAnswer(themes[iChoose]),
+    qu.readLineTheme(themes[iChoose])[i]
+  );
+  if (i === user) {
+    score += 1;
+  }
 }
 
 console.log(`Спасибо за игру!!! Правильных ответов: ${score} из 5`);
